@@ -23,8 +23,17 @@
             labels.push(`Unit ${i}`)
 
         })
-        
+
         console.log(labels)
+        
+        //functions that returns functions
+        function greaterThan(n){
+            return m => m>n
+        }
+        
+        greaterThan10=greaterThan(10)
+        console.log(greaterThan10(11))
+        
     </script>
 </body>
 </html>
