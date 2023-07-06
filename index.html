@@ -48,6 +48,20 @@
         return passed
        }
        console.log(filter(SCRIPTS,elem =>elem.living))
+
+
+       //creating our map higher order function
+       function map(array, transform){
+        let mapped = []
+        for(let elem of array){
+            mapped.push(transform(elem))
+
+        }
+        return mapped;
+       }
+
+       filtred_array = filter(SCRIPTS, elem=>elem.living)
+       console.log(map(filtred_array,s=>s.name))
     </script>
 </body>
 </html>
