@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts.js"></script>
+
     <title>JSPlayground</title>
 </head>
 <body>
     <script>
+        
         //passig a predfined function as an argument
         function repeat(n , action){
             for(let i =0; i<n;i++){
@@ -34,6 +37,17 @@
         greaterThan10=greaterThan(10)
         console.log(greaterThan10(11))
         
+       //creating our filter higher order function
+       function filter(array, action){
+        let passed = []
+        for (let element of array){
+            if(action(element)){
+                passed.push(element);
+            }
+        }
+        return passed
+       }
+       console.log(filter(SCRIPTS,elem =>elem.living))
     </script>
 </body>
 </html>
