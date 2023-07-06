@@ -11,11 +11,20 @@
         //passig a predfined function as an argument
         function repeat(n , action){
             for(let i =0; i<n;i++){
-                action(i);
+                action(i);//action can be c.l & i it's argument
             } 
         }
         repeat(3,console.log)
+
+        //passig our own function as an argument
+      
+        let labels= []
+        repeat(3,i=>{
+            labels.push(`Unit ${i}`)
+
+        })
         
+        console.log(labels)
     </script>
 </body>
 </html>
